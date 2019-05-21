@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import configureStore from './redux-flow/configure-store'
 import * as serviceWorker from './serviceWorker';
-import 'normalize.css'
-import 'milligram'
-// import  reducer  from './redux-flow/reducers/
 
 
 
-const store = createStore(()=>console.log('reducer aqui'));
+
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
